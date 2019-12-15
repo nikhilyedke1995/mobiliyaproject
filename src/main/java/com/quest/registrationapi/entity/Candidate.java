@@ -18,6 +18,8 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+//Entity class
+
 @Entity
 @Table(name="CANDIDATE")
 public class Candidate {

@@ -13,6 +13,7 @@ import com.quest.registrationapi.entity.Candidate;
 import com.quest.registrationapi.exception.CandidateNotFoundException;
 import com.quest.registrationapi.repository.RegistrationRepository;
 
+// Service class
 @Service
 public class RegistrationServiceImpl implements RegistrationService {
 	
@@ -21,6 +22,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 	@Autowired
 	RegistrationRepository registrationRepository;
 
+	
 	@Override
 	public long registerUser(RegistrationDetailsDTO registrationDTO) {
 		// TODO Auto-generated method stub

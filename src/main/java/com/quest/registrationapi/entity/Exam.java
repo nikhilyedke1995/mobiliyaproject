@@ -13,6 +13,7 @@ import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+//Entity class
 @Entity
 @Table(name="EXAM")
 public class Exam {

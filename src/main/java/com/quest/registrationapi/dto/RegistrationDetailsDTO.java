@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.quest.registrationapi.entity.Exam;
 
+// DTO class
 public class RegistrationDetailsDTO implements Serializable{
 
 	private static final long serialVersionUID = 3314616237572991839L;

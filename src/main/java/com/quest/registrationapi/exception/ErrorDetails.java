@@ -2,6 +2,7 @@ package com.quest.registrationapi.exception;
 
 import java.util.Date;
 
+//This class generally handles all the details regarding the exception
 public class ErrorDetails {
 	
 	private Date timestamp;

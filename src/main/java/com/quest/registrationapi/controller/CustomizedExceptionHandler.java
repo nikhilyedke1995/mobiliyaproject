@@ -20,12 +20,26 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import com.quest.registrationapi.exception.CandidateNotFoundException;
 import com.quest.registrationapi.exception.ErrorDetails;
 
+/**	This is customized exception handler class. 
+ * 	All the exception from this application will land here. 
+ */
 @ControllerAdvice
 @RestController
 public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler{
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CustomizedExceptionHandler.class);
+
 	
+	
+	
+	/**
+	 * 
+	 * @param CandidateNotFoundException 
+	 * @param WebRequest
+	 * @return ResponseEntity<ErrorDetails>
+	 * 
+	 * This method is responsible to handle the CandidateNotFoundException and then configure the exception into ErrorDetails object and then send it back as a response.
+	 */
 	@ExceptionHandler(CandidateNotFoundException.class)
 	public final ResponseEntity<ErrorDetails> handleCandidateNotFoundException(CandidateNotFoundException exe,WebRequest request){
 		LOGGER.info("CandidateNotFoundException occured " + exe.getMessage());
@@ -33,7 +47,14 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler{
 		return new ResponseEntity<>(error,HttpStatus.NOT_FOUND);
 	}
 	
-	
+	/**
+	 * 
+	 * @param Exception
+	 * @param WebRequest
+	 * @return ResponseEntity<ErrorDetails>
+	 * 
+	 * This method will handle and map all the generic exceptions into ErrorDetails object, and then it will send it back as a response. 
+	 */
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<ErrorDetails> handleAllExceptions(Exception ex, WebRequest request) {
 	  LOGGER.info("Exception occured " + ex.getMessage());
@@ -41,6 +62,13 @@ public class CustomizedExceptionHandler extends ResponseEntityExceptionHandler{
 	  return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 	
+	/**
+	 * 
+	 * @param ConstraintViolationException
+	 * @return Map<String,String>
+	 * 
+	 * 	This method handles all the validation exception in case any validation fails. It then send the validation message back as response.
+	 */
 	@ResponseStatus(HttpStatus.BAD_REQUEST)
 	@ExceptionHandler(ConstraintViolationException.class)
 	public Map<String, String> handleValidationExceptions(ConstraintViolationException ex) {
