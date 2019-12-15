@@ -1,28 +1,28 @@
 # mobiliyaproject
 Client Registration Application
 
-Steps to Setup
+# Steps to Setup
 
-1. Clone the repository
+# 1. Clone the repository
 
-  git clone https://github.com/nikhilyedke1995/mobiliyaproject.git
+    	git clone https://github.com/nikhilyedke1995/mobiliyaproject.git
   
-2. Create a database in MySQL using below details.
-  DB name : test
-  Username : root
-  password : 
+# 2. Create a database in MySQL using below details.
+  	DB name : test
+  	Username : root
+  	password : 
   
-3. Run the app using maven 
+# 3. Run the app using maven 
 
-  cd mobiliyaproject
-  mvn spring-boot:run
+  	cd mobiliyaproject
+ 	 mvn spring-boot:run
 
-4. Use below endpoint to check the application using POSTMAN.
+# 4. Use below endpoint to check the application using POSTMAN.
 
-  1) register a candidate 
-  POST : http://localhost:8080/candidate
-  Body : 
-  {
+  	1) register a candidate 
+  	POST : http://localhost:8080/candidate
+  	Body : 
+  	{
 	"name":"Nikhil Yedke",
 	"qualification":"BE",
 	"experience":2,
@@ -39,8 +39,8 @@ Steps to Setup
 		}
 		]
 	
-}
+	}
 
-2) TO get candidate information
-GET : http://localhost:8080/candidate/{id}
+	2) TO get candidate information
+	GET : http://localhost:8080/candidate/{id}
 
