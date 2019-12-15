@@ -19,7 +19,7 @@ import com.quest.registrationapi.dto.RegistrationDetailsDTO;
 import com.quest.registrationapi.service.RegistrationService;
 
 @Controller
-@RequestMapping("/register")
+@RequestMapping("/candidate")
 public class RegistrationController {
 
 	@Autowired
