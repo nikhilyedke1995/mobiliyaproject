@@ -41,10 +41,10 @@ Client Registration Application
 	
 	}
 	
-	![register image](https://github.com/nikhilyedke1995/mobiliyaproject/blob/master/images/candidatesave.jpg)
+	![register image](https://github.com/nikhilyedke1995/mobiliyaproject/blob/master/images/candidatesave.png)
 
 	2) TO get candidate information
 	GET : http://localhost:8080/candidate/{id}
-	![fetch image](https://github.com/nikhilyedke1995/mobiliyaproject/blob/master/images/fetchcandidate.jpg)
+	![fetch image](https://github.com/nikhilyedke1995/mobiliyaproject/blob/master/images/fetchcandidate.png)
 	
 
